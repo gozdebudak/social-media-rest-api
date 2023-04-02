@@ -29,7 +29,7 @@ public class UserResource {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<Object> createUser(@RequestBody User user){
+    public ResponseEntity<User> createUser(@RequestBody User user){
         service.save(user);
         return ResponseEntity.created(null).build();
     }
